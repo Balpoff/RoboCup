@@ -1,0 +1,10 @@
+i = 0
+for i in range(1188):
+    with open('photo' + str(i) + '.xml', 'r') as f:
+        old_data = f.read()
+
+    new_data = old_data.replace('dataset_football 1', 'dataset_football')
+
+    with open('photo' + str(i) + '.xml', 'w') as f:
+        f.write(new_data)
+    i += 1
